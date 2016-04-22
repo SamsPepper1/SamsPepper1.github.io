@@ -1,6 +1,6 @@
 window.onload = function() {
   block_size_x = 10;
-  block_size_y = 2;
+  block_size_y = 10;
   var seed = Math.random();
   var pn = new Perlin(seed);
   var canvas = document.getElementById('clouds');
@@ -21,7 +21,7 @@ function make_frame(canvas, pn, offset) {
   for (var i = 0; i <= canvas.height / block_size_y; i ++) {
     a[i] = [];
     for (var ii = 0; ii <= canvas.width / block_size_x; ii ++) {
-      var rgb = Math.max(parseInt(pn.noise((i + offset/10)/20, (ii + offset/10)/20,0) * 255) - 128, 0);
+      var rgb = Math.max(parseInt(pn.noise((i + offset/20)/20, (ii + offset/50)/20,offset/100) * 255) - 128, 0);
       var hexColor = rgbToHex(rgb,rgb,rgb);
       a[i][ii] = hexColor;
     }

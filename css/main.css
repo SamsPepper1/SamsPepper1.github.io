@@ -16,6 +16,10 @@ a {
   hover: red;
 }
 
+.active a{
+  text-decoration: none;
+}
+
 a:hover {
   color: red;
   text-decoration: underline;
@@ -26,13 +30,20 @@ li {
   list-style-type: none;
 }
 
+
+
 h1,h2,h3,h4 {
   margin: 0px;
   padding: 0px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 #header {
-  text-align: center;
+  text-align: right;
   padding: 5px;
   margin: 0px;
   margin-bottom: 20px;
@@ -44,15 +55,20 @@ h1,h2,h3,h4 {
 }
 
 #contentBox {
-  border: 1px white solid;
   margin: 0px;
   padding: 5px;
   padding-top: 2px;
-  max-height: 200px;
+  height: auto;
   text-align: justify;
+  display: inline-block;
 }
 
-#contentBox:hover {
+.content {
+    border: 1px white solid;
+    display: inline-block;
+}
+
+.content:hover {
   border-left: 1px red solid;
 }
 
@@ -61,7 +77,7 @@ h1,h2,h3,h4 {
 }
 #sidebar {
   border-left: 1px white solid;
-  height: 200px;
+  height: 100%;
   margin-bottom: 5px;
 }
 
@@ -72,6 +88,7 @@ h1,h2,h3,h4 {
 #footer {
   margin: 0px;
   border-left: 1px white solid;
+  /*position: absolute;*/
 }
 
 #footer:hover {
@@ -83,8 +100,6 @@ h1,h2,h3,h4 {
 }
 
 
-
-
 #footer ul li {
   display: inline;
 }
@@ -92,6 +107,6 @@ h1,h2,h3,h4 {
 #clouds {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   z-index: -1;
 }
